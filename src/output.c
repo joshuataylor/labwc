@@ -47,6 +47,7 @@ output_destroy_notify(struct wl_listener *listener, void *data)
 	wl_list_remove(&output->link);
 	wl_list_remove(&output->frame.link);
 	wl_list_remove(&output->destroy.link);
+	wl_list_remove(&output->request_state.link);
 
 	int nr_layers = sizeof(output->layer_tree) / sizeof(output->layer_tree[0]);
 	for (int i = 0; i < nr_layers; i++) {
@@ -64,6 +65,15 @@ output_destroy_notify(struct wl_listener *listener, void *data)
 		}
 	}
 	free(output);
+}
+
+static void
+output_request_state_notify(struct wl_listener *listener, void *data)
+{
+	/* This ensures nested backends can be resized */
+	struct output *output = wl_container_of(listener, output, request_state);
+	const struct wlr_output_event_request_state *event = data;
+	wlr_output_commit_state(output->wlr_output, event->state);
 }
 
 static void do_output_layout_change(struct server *server);
@@ -164,6 +174,9 @@ new_output_notify(struct wl_listener *listener, void *data)
 	wl_signal_add(&wlr_output->events.destroy, &output->destroy);
 	output->frame.notify = output_frame_notify;
 	wl_signal_add(&wlr_output->events.frame, &output->frame);
+
+	output->request_state.notify = output_request_state_notify;
+	wl_signal_add(&wlr_output->events.request_state, &output->request_state);
 
 	wl_list_init(&output->regions);
 
