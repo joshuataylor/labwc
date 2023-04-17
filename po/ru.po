@@ -1,7 +1,7 @@
 # Labwc pot file
-# Copyright (C) 2022
+# Copyright (C) 2023
 # This file is distributed under the same license as the labwc package.
-# FIRST AUTHOR <01micko@gmail.com>, 2022.
+# FIRST AUTHOR <samoilov.lex@gmail.com>, 2023.
 #
 #, fuzzy
 msgid ""
@@ -9,54 +9,54 @@ msgstr ""
 "Project-Id-Version: labwc\n"
 "Report-Msgid-Bugs-To: https://github.com/labwc/labwc/issues\n"
 "POT-Creation-Date: 2023-01-02 11:22+1000\n"
-"PO-Revision-Date: 2022-04-30 16:50+1000\n"
-"Last-Translator: Mick Amadio <01micko@gmail.com>\n"
+"PO-Revision-Date: 2023-04-14 15:18+1000\n"
+"Last-Translator: Aleksey Samoilov <samoilov.lex@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: Spanish\n"
+"Language: Russian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/menu/menu.c:631
 msgid "Reconfigure"
-msgstr "Reconfigurar"
+msgstr "Перенастроить"
 
 #: src/menu/menu.c:633
 msgid "Exit"
-msgstr "Salir"
+msgstr "Выход"
 
 #: src/menu/menu.c:649
 msgid "Minimize"
-msgstr "Minimizar"
+msgstr "Свернуть"
 
 #: src/menu/menu.c:651
 msgid "Maximize"
-msgstr "Maximizar"
+msgstr "Распахнуть"
 
 #: src/menu/menu.c:653
 msgid "Fullscreen"
-msgstr "Pantalla completa"
+msgstr "На весь экран"
 
 #: src/menu/menu.c:655
 msgid "Decorations"
-msgstr "Decoraciones"
+msgstr "Декорации"
 
 #: src/menu/menu.c:657
 msgid "AlwaysOnTop"
-msgstr "Siempre encima"
+msgstr "Всегда на переднем плане"
 
 #: src/menu/menu.c:662
 msgid "Move left"
-msgstr "Mover a la izquierda"
+msgstr "Переместить влево"
 
 #: src/menu/menu.c:667
 msgid "Move right"
-msgstr "Mover a la derecha"
+msgstr "Переместить вправо"
 
 #: src/menu/menu.c:672
 msgid "Workspace"
-msgstr "Espacio de trabajo"
+msgstr "Рабочее пространство"
 
 #: src/menu/menu.c:675
 msgid "Close"
-msgstr "Cerrar"
+msgstr "Закрыть"
