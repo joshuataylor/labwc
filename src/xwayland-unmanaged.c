@@ -174,7 +174,7 @@ unmanaged_handle_request_activate(struct wl_listener *listener, void *data)
 	struct view *view = desktop_topmost_mapped_view(server);
 	if (view && view->type == LAB_XWAYLAND_VIEW) {
 		struct wlr_xwayland_surface *surf =
-			wlr_xwayland_surface_from_wlr_surface(view->surface);
+                wlr_xwayland_surface_try_from_wlr_surface(view->surface);
 		if (surf && surf->pid != xsurface->pid) {
 			return;
 		}
